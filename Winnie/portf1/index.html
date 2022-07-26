@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winnie Pooh</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Winnie the Pooh and friends</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Winnie's Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Winnie-the-Pooh</h2>
+            <p>
+                Winnie-the-Pooh, also called Pooh Bear and Pooh, 
+                is a fictional anthropomorphic teddy bear created by English author 
+                A. A. Milne and English illustrator E. H. Shepard.
+                <br>
+                The first collection of stories about the character was the book Winnie-the-Pooh (1926),
+                 and this was followed by The House at Pooh Corner (1928). 
+                 Milne also included a poem about the bear in the children's verse book When We Were Very Young (1924
+                 and many more in Now We Are Six (1927). 
+                 All four volumes were illustrated by E. H. Shepard. 
+            </p>
+            <p>
+                The Pooh stories have been translated into many languages, 
+                including Alexander Lenard's Latin translation, Winnie ille Pu, 
+                which was first published in 1958, a
+                in 1960, became the only Latin book ever to have been featured on The New
+                York Times Best Seller list
+            </p>
+            <p>
+                In 1961, Walt Disney Productions licensed certain film and other rights
+                of Milne's Winnie-the-Pooh stories from the estate of A. A. Milne and the licensing agent
+                Stephen Slesinger, Inc., and adapted the Pooh stories, using the unhyphenated name "Winnie the Pooh",
+                into a series of features 
+                that would eventually become one of its most successful franchises
+            </p>
+            <p>
+              From 1928 past already...
+              <span id="time-container">0</span> seconds!
+            </p>
+          </div>
+          <img
+            src="https://pngimg.com/uploads/winnie_pooh/winnie_pooh_PNG37624.png"
+            alt="Winnie-the-Pooh"
+            class="portrait"
+          />
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Winnie's Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Project Tiger</h3>
+          </summary>
+          <img
+            src="https://freepngimg.com/thumb/winnie_the_pooh/30704-7-winnie-the-pooh-photos.png" width="50" height="auto"
+            alt="Project Tiger"
+            class="project-image"
+          />
+          <p class="project-description">
+            Tiger likes jumping
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3> Preject Piglet</h3>
+          </summary>
+          <img
+            src="https://www.nicepng.com/png/detail/57-573178_jpg-eset-smart-security-mod-blogofeb-pinterest-piglets.png" width="50 auto"
+            alt="An original model of part of the Analytical Engine"
+            class="project-image"
+          />
+          <p class="project-description">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+             incididunt ut labore et dolore magna aliqua"
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Project Rabbit</h3>
+          </summary>
+          <img
+            src="https://www.nicepng.com/png/detail/425-4251610_pooh-babies-winnie-the-pooh-clip-art-images.png" width="50" height="auto"
+            alt='Rabbit'
+            class="project-image"
+          />
+          <p class="project-description">
+            Rabbit loves his carrots...
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-aws"></i>
+          <i class="fab fa-sketch"></i>
+          <i class="fab fa-figma"></i>
+          <i class="fab fa-git"></i>
+          <i class="fab fa-chrome"></i>
+          <i class="fas fa-terminal"></i>
+          <i class="fas fa-universal-access"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-github"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made with <span class="heart">♥</span> in London</footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "01-01-1928";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>
